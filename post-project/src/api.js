@@ -20,9 +20,9 @@ export async function getUserPosts(userId) {
 }
 
 export async function getUserWithPosts(userId) {
-  const [user, post] = await Promise.all([
+  const [user, posts] = await Promise.all([
     getUser(userId),
     getUserPosts(userId),
   ]);
-  return { user, post };
+  return { user, posts };
 }
