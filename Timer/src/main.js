@@ -1,6 +1,8 @@
 import "./style.css";
+
 function formatTime(seconds) {
   const reminderSeconds = seconds % 60;
+  const timerElement = document.getElementById('timer');
   const minutes = (seconds - reminderSeconds) / 60;
   const formattedSeconds =
     reminderSeconds < 10 ? `0${reminderSeconds}` : reminderSeconds;
